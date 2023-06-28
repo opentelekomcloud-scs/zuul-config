@@ -1,0 +1,52 @@
+- hosts: localhost
+  roles:
+    - role: emit-job-header
+      zuul_log_path_shard_build: true
+    - log-inventory
+
+- hosts: all
+  tasks:
+    - include_role:
+        name: start-zuul-console
+
+    - block:
+        # A regular VM way
+        - include_role:
+            name: validate-host
+        - include_role:
+            name: prepare-workspace
+        - include_role:
+            name: add-build-sshkey
+      when: "ansible_connection != 'kubectl'"
+    - block:
+        # A Pod way
+        - include_role:
+            name: prepare-workspace-openshift
+        - include_role:
+            name: remove-zuul-sshkey
+      run_once: true
+      when: "ansible_connection == 'kubectl'"
+
+    - import_role:
+        name: ensure-output-dirs
+      when: ansible_user_dir is defined
+
+# If there is a registered role (as constructed from project name) try to
+# generate secret-id and leave it at well-known location. The job is then
+# responsible to take it and use. Secret is wrapped with ttl set to job
+# timeout.  Try to do so only if there is zuul_vault variable with role_id set
+# in (We do not use role_id, but just presence).
+- hosts: localhost
+  tasks:
+    - include_role:
+        name: create-vault-approle-secret
+      vars:
+        vault_addr: "{{ zuul_vault_addr }}"
+        vault_token: "{{ lookup('file', zuul_base_vault_token_path) }}"
+        vault_secret_dest: "{{ zuul.executor.work_root }}/.approle-secret"
+        vault_role_name: "{{ ['zuul', zuul.tenant, zuul.project.name] | join('_') | regex_replace('/', '_') }}"
+      when:
+        - "zuul.post_review | bool"
+        - "zuul_vault_addr is defined"
+        - "zuul_base_vault_token_path is defined"
+        - "zuul_vault is defined and zuul_vault.vault_role_id is defined"

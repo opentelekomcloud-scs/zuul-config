@@ -1,0 +1,44 @@
+---
+images-dir: /opt/nodepool/images
+elements-dir: /data/nodepool/elements
+webapp:
+  port: 8005
+
+zookeeper-servers:
+  - host: zookeeper.zuul-ci.svc.cluster.local
+    port: 2281
+
+zookeeper-tls:
+  cert: /tls/client/tls.crt
+  key: /tls/client/tls.key
+  ca: /tls/client/ca.crt
+
+diskimages:
+
+labels:
+  - name: pod-fedora-latest
+  - name: pod-fedora-35
+  - name: pod-fedora-36
+
+providers:
+  - name: osinfra
+    driver: kubernetes
+    context: otcci
+    pools:
+      - name: zuul
+        labels:
+          - name: pod-fedora-latest
+            type: pod
+            image: quay.io/opentelekomcloud/zuul-fedora:33
+            cpu: 2
+            memory: 2048
+          - name: pod-fedora-35
+            type: pod
+            image: quay.io/opentelekomcloud/zuul-fedora:35
+            cpu: 2
+            memory: 2048
+          - name: pod-fedora-36
+            type: pod
+            image: quay.io/opentelekomcloud/zuul-fedora:36
+            cpu: 2
+            memory: 2048

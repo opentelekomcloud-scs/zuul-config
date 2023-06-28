@@ -1,0 +1,6 @@
+### K8 pods
+- nodeset:
+    name: pod-fedora-latest
+    nodes:
+      - name: fedora-pod
+        label: pod-fedora-36
