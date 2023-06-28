@@ -16,29 +16,16 @@ zookeeper-tls:
 diskimages:
 
 labels:
-  - name: pod-fedora-latest
-  - name: pod-fedora-35
-  - name: pod-fedora-36
+  - name: pod-fedora-38
 
 providers:
-  - name: osinfra
+  - name: scsinfra
     driver: kubernetes
-    context: otcci
     pools:
       - name: zuul
         labels:
-          - name: pod-fedora-latest
+          - name: pod-fedora-38
             type: pod
-            image: quay.io/opentelekomcloud/zuul-fedora:33
-            cpu: 2
-            memory: 2048
-          - name: pod-fedora-35
-            type: pod
-            image: quay.io/opentelekomcloud/zuul-fedora:35
-            cpu: 2
-            memory: 2048
-          - name: pod-fedora-36
-            type: pod
-            image: quay.io/opentelekomcloud/zuul-fedora:36
+            image: quay.io/opentelekomcloud/zuul-fedora:post_38
             cpu: 2
             memory: 2048
