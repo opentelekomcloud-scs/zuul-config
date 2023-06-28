@@ -17,4 +17,4 @@
         untrusted-projects:
           - zuul/zuul-jobs:
               shadow:
-                - opentelekomcloud-scs/project-config
+                - opentelekomcloud-scs/zuul-config
