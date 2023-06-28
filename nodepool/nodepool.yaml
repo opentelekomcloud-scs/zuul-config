@@ -14,9 +14,48 @@ zookeeper-tls:
   ca: /tls/client/ca.crt
 
 diskimages:
+  - name: base
+    abstract: true
+    elements:
+      - vm
+      - simple-init
+      - nodepool-base
+      - growroot
+      - infra-package-needs
+      - otc-base
+    env-vars:
+      DIB_CHECKSUM: "1"
+      DIB_IMAGE_CACHE: /opt/dib_cache
+      DIB_JOURNAL_SIZE: "512"
+      DIB_GRUB_TIMEOUT: "0"
+      GIT_HTTP_LOW_SPEED_TIME: "300"
+      GIT_HTTP_LOW_SPEED_LIMIT: "1000"
+      DIB_SHOW_IMAGE_USAGE: "1"
+      ZUUL_USER_SSH_PUBLIC_KEY: |
+        ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBA43UY7GglqHEkSkeeh9fE20cHOWMhO7aPuQPusbWITsxN3coCuYO8moa1OhFqDpKufX2kcYArfwknLqQmf/noA=
+
+  - name: base-debuntu
+    abstract: true
+    parent: base
+    env-vars:
+      DIB_APT_LOCAL_CACHE: "0"
+      DIB_DISABLE_APT_CLEANUP: "1"
+      DIB_DEBOOTSTRAP_EXTRA_ARGS: "--no-check-gpg"
+
+  # ############ Ubuntu #############
+  - name: ubuntu-jammy
+    parent: base-debuntu
+    pause: false
+    elements:
+      - ubuntu-minimal
+    release: jammy
+    env-vars:
+      DIB_DISTRIBUTION_MIRROR: "https://ftp.halifax.rwth-aachen.de/ubuntu"
+      DIB_DEBIAN_COMPONENTS: "main,universe"
 
 labels:
   - name: pod-fedora-38
+  - name: ubuntu-jammy
 
 providers:
   - name: scsinfra
