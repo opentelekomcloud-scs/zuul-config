@@ -68,3 +68,24 @@ providers:
             image: quay.io/opentelekomcloud/zuul-fedora:post_38
             cpu: 2
             memory: 2048
+  - name: otc-scs
+    driver: openstack
+    cloud: scs
+    boot-timeout: 120
+    diskimages:
+      - name: ubuntu-jammy
+    pools:
+      - name: pool1
+        max-servers: 9
+        auto-floating-ip: False
+        availability-zones:
+          - eu-de-01
+          - eu-de-02
+          - eu-de-03
+        networks:
+          - zuul_net
+        labels:
+          - name: ubuntu-jammy
+            diskimage: ubuntu-jammy
+            flavor-name: s2.xlarge.2
+            key-name: nodepool
