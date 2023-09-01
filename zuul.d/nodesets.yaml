@@ -3,4 +3,10 @@
     name: pod-fedora-latest
     nodes:
       - name: fedora-pod
-        label: pod-fedora-36
+        label: pod-fedora-38
+
+- nodeset:
+    name: ubuntu-jammy
+    nodes:
+      - name: ubuntu-jammy
+        label: ubuntu-jammy
