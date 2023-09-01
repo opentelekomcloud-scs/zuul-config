@@ -1,7 +1,7 @@
 ---
 - tenant:
     name: scs
-    exclude-unprotected-branches: false
+    exclude-unprotected-branches: true
     report-build-page: true
     max-nodes-per-job: 5
     source:
