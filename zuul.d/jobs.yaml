@@ -57,6 +57,6 @@
       - zuul: zuul/zuul-jobs
     timeout: 1800
     post-timeout: 1800
-    nodeset: pod-fedora-36
+    nodeset: ubuntu-jammy
     extra-vars:
       zuul_use_fetch_output: true
