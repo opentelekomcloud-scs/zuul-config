@@ -54,20 +54,20 @@ diskimages:
       DIB_DEBIAN_COMPONENTS: "main,universe"
 
 labels:
-  - name: pod-fedora-38
+  # - name: pod-fedora-38
   - name: ubuntu-jammy
 
 providers:
-  - name: scsinfra
-    driver: kubernetes
-    pools:
-      - name: zuul
-        labels:
-          - name: pod-fedora-38
-            type: pod
-            image: quay.io/opentelekomcloud/zuul-fedora:post_38
-            cpu: 2
-            memory: 2048
+  #  - name: scsinfra
+  #    driver: kubernetes
+  #    pools:
+  #      - name: zuul
+  #        labels:
+  #          - name: pod-fedora-38
+  #            type: pod
+  #            image: quay.io/opentelekomcloud/zuul-fedora:post_38
+  #            cpu: 2
+  #            memory: 2048
   - name: otc-scs
     driver: openstack
     cloud: scs
@@ -77,7 +77,7 @@ providers:
     pools:
       - name: pool1
         max-servers: 9
-        auto-floating-ip: False
+        auto-floating-ip: false
         availability-zones:
           - eu-de-01
           - eu-de-02
@@ -88,4 +88,4 @@ providers:
           - name: ubuntu-jammy
             diskimage: ubuntu-jammy
             flavor-name: s2.xlarge.2
-            key-name: nodepool
+            key-name: scs-stable-general
