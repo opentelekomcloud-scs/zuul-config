@@ -2,8 +2,10 @@
     merge-mode: squash-merge
     default-branch: main
     check:
-      jobs: []
+      jobs:
+        - tox-linters
     gate:
-      jobs: []
+      jobs:
+        - tox-linters
     post:
       jobs: []
