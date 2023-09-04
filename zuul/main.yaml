@@ -11,7 +11,7 @@
       github:
         config-projects:
           - opentelekomcloud-scs/zuul-config
-        untrusted-projects: 
+        untrusted-projects:
           - opentelekomcloud-scs/configuration_1
           - osism/zuul-jobs
 
