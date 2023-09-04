@@ -84,6 +84,8 @@ providers:
           - eu-de-03
         networks:
           - zuul_net
+        security-groups:
+          - zuul-security-group
         labels:
           - name: ubuntu-jammy
             diskimage: ubuntu-jammy
