@@ -88,4 +88,4 @@ providers:
           - name: ubuntu-jammy
             diskimage: ubuntu-jammy
             flavor-name: s2.xlarge.2
-            key-name: nodepool
+            key-name: scs-stable-general
