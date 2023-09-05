@@ -1,6 +1,6 @@
 - project:
     merge-mode: squash-merge
-    default-branch: main
+    default-branch: master
     check:
       jobs:
         - tox-linters
