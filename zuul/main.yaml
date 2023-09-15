@@ -15,6 +15,7 @@
           - opentelekomcloud-scs/configuration_1
           - osism/zuul-jobs
           - opentelekomcloud-scs/terraform-base
+          - opentelekomcloud-scs/testbed
 
       opendev:
         untrusted-projects:
