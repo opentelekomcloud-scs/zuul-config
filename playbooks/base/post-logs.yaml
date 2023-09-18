@@ -6,8 +6,8 @@
     - name: Upload to OBS
       include_role:
         name: upload-logs-s3
-        vars:
-          zuul_log_bucket: zuul-logs
-          upload_logs_s3_endpoint: https://obs.eu-de.otc.t-systems.com
-          zuul_log_aws_access_key: "{{ obs_log_upload.zuul_log_aws_access_key }}"
-          zuul_log_aws_secret_key: "{{ obs_log_upload.zuul_log_aws_secret_key }}"
+      vars:
+        zuul_log_bucket: zuul-logs
+        upload_logs_s3_endpoint: https://obs.eu-de.otc.t-systems.com
+        zuul_log_aws_access_key: "{{ obs_log_upload.zuul_log_aws_access_key }}"
+        zuul_log_aws_secret_key: "{{ obs_log_upload.zuul_log_aws_secret_key }}"
