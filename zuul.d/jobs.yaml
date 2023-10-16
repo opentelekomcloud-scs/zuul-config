@@ -39,3 +39,14 @@
       zuul_use_fetch_output: true
     secrets:
       - obs_log_upload
+
+- job:
+    name: base-extra-logs
+    parent: base
+    description: |
+      A base job variant with extra logs.
+
+      In addition to the plain base job this collects extra logs,
+      docs and artifacts from all nodes.
+    post-run:
+      - playbooks/base/post-fetch.yaml
