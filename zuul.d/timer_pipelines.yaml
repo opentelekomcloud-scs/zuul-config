@@ -1,10 +1,10 @@
 ---
 - pipeline:
     name: periodic-daily
-    description: This pipeline runs jobs daily at 3am.
+    description: This pipeline runs jobs daily at 7pm CET.
     post-review: true
     manager: independent
     precedence: low
     trigger:
       timer:
-        - time: '15 15 * * *'
+        - time: '0 17 * * *'
