@@ -15,7 +15,7 @@
         untrusted-projects:
           - opentelekomcloud-scs/configuration_1
           - osism/zuul-jobs
-          - opentelekomcloud-scs/terraform-base
+          - osism/terraform-base
           - opentelekomcloud-scs/testbed
           - osism/ansible-collection-commons
           - osism/ansible-collection-services
