@@ -1,10 +1,10 @@
 ---
 - pipeline:
-    name: periodic-daily
-    description: This pipeline runs jobs daily at 7pm CET.
+    name: periodic-half-hourly-otc
+    description: Run each 30 minutes.
     post-review: true
     manager: independent
     precedence: low
     trigger:
       timer:
-        - time: '0 17 * * *'
+        - time: '*/30 * * * *'
