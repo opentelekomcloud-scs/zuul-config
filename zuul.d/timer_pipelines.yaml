@@ -1,10 +1,10 @@
 ---
 - pipeline:
-    name: periodic-half-hourly-otc
-    description: Run each 30 minutes.
+    name: periodic-hourly-otc
+    description: Run each 60 minutes.
     post-review: true
     manager: independent
     precedence: low
     trigger:
       timer:
-        - time: '*/30 * * * *'
+        - time: '* * * * *'
