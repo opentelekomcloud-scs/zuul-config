@@ -32,7 +32,7 @@ diskimages:
       GIT_HTTP_LOW_SPEED_LIMIT: "1000"
       DIB_SHOW_IMAGE_USAGE: "1"
       ZUUL_USER_SSH_PUBLIC_KEY: |
-        ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBA43UY7GglqHEkSkeeh9fE20cHOWMhO7aPuQPusbWITsxN3coCuYO8moa1OhFqDpKufX2kcYArfwknLqQmf/noA=
+        ecdsa-sha2-nistp256 AAAAB3NzaC1yc2EAAAADAQABAAABAQDZrpH1QuSE3WCUHHuB3Ojo48SLUQsSASA1SERBjoEc299p3OI304/J3l08ScqdeNQzo7LCWT+/4PfahgDgjf7qjQiA1JLZ31DDQLJKkMszj7ytXcr4QpSjF9DsxDil5/luyGRKhel5OOWZoG7suue/nVWTOriPuSsJjkWKhlHyv40efJQfonn+Gdu+f3lY0Be49mOkcdpKA1GJkgDJ1SRkrjcc2fE8PvPeiAEB9v0tLVGjx9nG8UMbQRT0Fmray6E8u0oyRWUyqyCPC5djkS6sRT02KcKB1lrcon/utruNsoidlUFKuJwaI8oxGbhn/u4d0kPfEHJ6V9MMtMtOfqQL
 
   - name: base-debuntu
     abstract: true
