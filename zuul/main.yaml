@@ -6,9 +6,6 @@
     max-nodes-per-job: 5
     max-job-timeout: 16200
     source:
-      gitea:
-        untrusted-projects: []
-
       github:
         config-projects:
           - opentelekomcloud-scs/zuul-config
