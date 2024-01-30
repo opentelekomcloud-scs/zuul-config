@@ -21,36 +21,18 @@
         - event: check_run
           action: rerequested
           check: .*/check:.*
-      gitea:
-        - event: gt_pull_request
-          action:
-            - opened
-            - changed
-            - reopened
-        - event: gt_pull_request
-          action: comment
-          comment: (?i)^\s*recheck\s*$
     start:
       github:
         check: in_progress
         comment: false
-      gitea:
-        comment: false
-        status: "pending"
     success:
       github:
         check: success
         comment: false
-      gitea:
-        comment: true
-        status: "success"
     failure:
       github:
         check: failure
         comment: false
-      gitea:
-        comment: true
-        status: "failure"
     dequeue:
       github:
         check: cancelled
@@ -75,11 +57,6 @@
         open: true
         label: 'gate'
         # status: "otc-zuul\\[bot\\]:eco/check:success"
-      gitea:
-        approved: true
-        open: true
-        labels:
-          - 'gate'
     trigger:
       github:
         - event: pull_request_review
@@ -101,33 +78,17 @@
           action: labeled
           label:
             - gate
-      gitea:
-        - event: gt_pull_request
-          action: comment
-          comment: (?i)gate$
-        - event: gt_pull_request
-          action: label_updated
     start:
       github:
         check: in_progress
         comment: false
-      gitea:
-        comment: false
-        status: 'pending'
     success:
       github:
         check: success
         merge: true
-      gitea:
-        comment: true
-        status: 'success'
-        merge: true
     failure:
       github:
         check: failure
-      gitea:
-        comment: true
-        status: 'failure'
     dequeue:
       github:
         check: cancelled
@@ -147,7 +108,4 @@
     trigger:
       github:
         - event: push
-          ref: ^refs/heads/.*$
-      gitea:
-        - event: gt_push
           ref: ^refs/heads/.*$
