@@ -78,6 +78,7 @@ providers:
       - name: pool1
         max-servers: 9
         auto-floating-ip: false
+        host-key-checking: False
         availability-zones:
           - eu-de-01
           - eu-de-02
