@@ -14,9 +14,9 @@
           - osism/zuul-jobs
           - osism/terraform-base
           - opentelekomcloud-scs/testbed
+          - osism/container-image-osism-ansible
           - osism/ansible-collection-commons
           - osism/ansible-collection-services
-          - osism/container-image-osism-ansible
 
       opendev:
         untrusted-projects:
