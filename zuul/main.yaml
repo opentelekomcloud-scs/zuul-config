@@ -16,6 +16,7 @@
           - opentelekomcloud-scs/testbed
           - osism/ansible-collection-commons
           - osism/ansible-collection-services
+          - osism/container-image-osism-ansible
 
       opendev:
         untrusted-projects:
