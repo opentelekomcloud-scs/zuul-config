@@ -24,7 +24,7 @@
                 - opentelekomcloud-scs/zuul-config
 
 - tenant:
-    name: test
+    name: hello-world
     exclude-unprotected-branches: true
     report-build-page: true
     max-nodes-per-job: 5

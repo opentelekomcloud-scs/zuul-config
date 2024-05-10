@@ -1,0 +1,9 @@
+---
+- pipeline:
+    name: hello-world
+    description: "Hello World Pipeline"
+    manager: independent
+    trigger: 
+      github:
+        - event: push
+          ref: ^refs/head/.*$

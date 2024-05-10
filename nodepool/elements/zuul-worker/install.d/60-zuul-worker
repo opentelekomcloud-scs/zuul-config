@@ -72,3 +72,4 @@ rm -rf Python-3.12.1.tar.xz Python-3.12.1
 # Ansible with ansible-core > 2.15 needed
 pip install ansible==9.5.1
 ANSIBLE_GALAXY_SERVER_GALAXY_URL=https://galaxy.ansible.com ANSIBLE_GALAXY_SERVER_LIST=galaxy ansible-galaxy collection install ansible.posix
+
