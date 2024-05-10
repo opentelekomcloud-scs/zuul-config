@@ -22,3 +22,26 @@
           - zuul/zuul-jobs:
               shadow:
                 - opentelekomcloud-scs/zuul-config
+
+- tenant:
+    name: test
+    exclude-unprotected-branches: true
+    report-build-page: true
+    max-nodes-per-job: 5
+    max-job-timeout: 16200
+    source:
+      github:
+        config-projects:
+          - opentelekomcloud-scs/zuul-config
+        untrusted-projects:
+          - osism/zuul-jobs
+          - osism/terraform-base
+          - opentelekomcloud-scs/testbed
+          - osism/ansible-collection-commons
+          - osism/ansible-collection-services
+
+      opendev:
+        untrusted-projects:
+          - zuul/zuul-jobs:
+              shadow:
+                - opentelekomcloud-scs/zuul-config
