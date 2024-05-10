@@ -3,9 +3,10 @@
     default-branch: master
     check:
       jobs:
-        - tox-linters
+        - ansible-lint
+        - yamllint        
     gate:
       jobs:
-        - tox-linters
+        - flake8
     post:
       jobs: []
