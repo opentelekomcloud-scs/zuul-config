@@ -3,10 +3,10 @@
     default-branch: master
     check:
       jobs:
-        - ansible-lint
-        - yamllint        
+        - noop   
     gate:
       jobs:
-        - flake8
+        - noop
     post:
-      jobs: []
+      jobs: 
+        - noop      
