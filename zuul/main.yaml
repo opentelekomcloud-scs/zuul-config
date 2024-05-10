@@ -34,5 +34,4 @@
         config-projects:
           - opentelekomcloud-scs/zuul-config
         untrusted-projects:
-          - opentelekomcloud-scs/testbed
           - opentelekomcloud-scs/zull-test
