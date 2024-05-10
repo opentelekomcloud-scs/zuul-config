@@ -109,3 +109,12 @@
       github:
         - event: push
           ref: ^refs/heads/.*$
+
+- pipeline:
+    name: Hello-World
+    description: "Hello World Pipeline"
+    manager: independent
+    trigger: 
+      github:
+        - event: push
+          ref: ^refs/head/.*$
