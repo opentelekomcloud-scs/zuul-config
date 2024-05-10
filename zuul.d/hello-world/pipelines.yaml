@@ -1,9 +1,11 @@
 ---
 - pipeline:
-    name: hello-world
-    description: "Hello World Pipeline"
+    name: tag
+    description: This pipeline runs jobs in response to any tag event.
     manager: independent
-    trigger: 
+    precedence: high
+    post-review: true
+    trigger:
       github:
-        - event: post
-          ref: ^refs/head/.*$
+        - event: push
+          ref: ^refs/tags/.*$
