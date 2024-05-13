@@ -25,14 +25,11 @@
                 - opentelekomcloud-scs/zuul-config
 
 - tenant:
-    name: hello-world
-    exclude-unprotected-branches: true
+    name: zuul-test
     report-build-page: true
-    max-nodes-per-job: 5
-    max-job-timeout: 16200
     source:
       github:
         config-projects:
-          - opentelekomcloud-scs/zuul-config
+          - opentelekomcloud-scs/zuul-test-config
         untrusted-projects:
           - opentelekomcloud-scs/zuul-test
