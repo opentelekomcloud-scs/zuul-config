@@ -25,17 +25,11 @@
                 - opentelekomcloud-scs/zuul-config
 
 - tenant:
-    name: zuul-test
+    name: scs-stack
     report-build-page: true
     source:
       github:
         config-projects:
-          - opentelekomcloud-scs/zuul-test-config
-          - opentelekomcloud-scs/zuul-config         
+          - opentelekomcloud-scs/zuul-test-config         
         untrusted-projects:
           - opentelekomcloud-scs/zuul-test
-      opendev:
-        untrusted-projects:
-          - zuul/zuul-jobs:
-              shadow:
-                - opentelekomcloud-scs/zuul-config
