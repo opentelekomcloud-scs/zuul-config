@@ -33,3 +33,8 @@
           - opentelekomcloud-scs/zuul-test-config         
         untrusted-projects:
           - opentelekomcloud-scs/zuul-test
+      opendev:
+        untrusted-projects:
+          - zuul/zuul-jobs:
+              shadow:
+                - opentelekomcloud-scs/zuul-test-config
