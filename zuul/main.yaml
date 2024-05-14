@@ -34,3 +34,9 @@
           - opentelekomcloud-scs/zuul-test-nodepool          
         untrusted-projects:
           - opentelekomcloud-scs/zuul-test
+      opendev:
+        untrusted-projects:
+          - zuul/zuul-jobs:
+              shadow:
+                - opentelekomcloud-scs/zuul-config
+                
