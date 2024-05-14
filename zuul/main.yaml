@@ -31,7 +31,7 @@
       github:
         config-projects:
           - opentelekomcloud-scs/zuul-test-config
-          - opentelekomcloud-scs/zuul-test-nodepool          
+          - opentelekomcloud-scs/zuul-config         
         untrusted-projects:
           - opentelekomcloud-scs/zuul-test
       opendev:
@@ -39,4 +39,3 @@
           - zuul/zuul-jobs:
               shadow:
                 - opentelekomcloud-scs/zuul-config
-                
