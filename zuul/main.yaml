@@ -25,7 +25,7 @@
                 - opentelekomcloud-scs/zuul-config
 
 - tenant:
-    name: teststack
+    name: scs-stack
     report-build-page: true
     source:
       github:
