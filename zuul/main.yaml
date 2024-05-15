@@ -49,16 +49,16 @@
         untrusted-projects:
           - opentelekomcloud-scs/zuul-test
           - opentelekomcloud-scs/zuul-test-src-repo
-        untrusted-projects:          
-          - exclude:
-              - job
-              - semaphore
-              - project
-              - project-template
-              - nodeset
-              - secret
-            projects:
-              - osism/testbed    
+      github:
+        untrusted-projects:
+          - osism/testbed:          
+            - exclude:
+                - job
+                - semaphore
+                - project
+                - project-template
+                - nodeset
+                - secret
       opendev:
         untrusted-projects:
           - zuul/zuul-jobs:
