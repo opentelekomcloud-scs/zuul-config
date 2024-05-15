@@ -26,6 +26,7 @@
 
 - tenant:
     name: scs-stack
+    exclude-unprotected-branches: true    
     report-build-page: true
     source:
       github:
@@ -33,6 +34,9 @@
           - opentelekomcloud-scs/zuul-test-config         
         untrusted-projects:
           - opentelekomcloud-scs/zuul-test
+          - osism/testbed:
+              shadow:
+                - opentelekomcloud-scs/zuul-test
       opendev:
         untrusted-projects:
           - zuul/zuul-jobs:
