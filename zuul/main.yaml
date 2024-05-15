@@ -57,6 +57,7 @@
               - secret
             projects:
               - osism/testbed
+              - opentelekomcloud-scs/zuul-test-src-repo
       opendev:
         untrusted-projects:
           - zuul/zuul-jobs:
