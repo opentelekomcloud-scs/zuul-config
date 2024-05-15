@@ -34,7 +34,7 @@
           - opentelekomcloud-scs/zuul-test-config         
         untrusted-projects:
           - opentelekomcloud-scs/zuul-test
-          - opentelekomcloud-scs/zuul-test-src-repo
+          - opentelekomcloud-scs/zuul-test-src-repo:
               exclude:
                 - job
                 - semaphore
