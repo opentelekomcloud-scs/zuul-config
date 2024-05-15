@@ -35,11 +35,9 @@
         untrusted-projects:
           - opentelekomcloud-scs/zuul-test
           - opentelekomcloud-scs/zuul-test-src-repo
-      github:
-        untrusted-projects:
           - osism/testbed:  
-            - extra-config-paths: .zuul.yaml         
-            - exclude:
+              extra-config-paths: .zuul.yaml         
+              exclude:
                 - job
                 - semaphore
                 - project
