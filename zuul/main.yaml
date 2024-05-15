@@ -26,6 +26,7 @@
 
 - tenant:
     name: scs-stack
+    max-job-timeout: 18000  # Dies setzt das Limit auf 5 Stunden.
     exclude-unprotected-branches: true    
     report-build-page: true
     source:
