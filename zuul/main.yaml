@@ -32,6 +32,7 @@
         config-projects:
           - opentelekomcloud-scs/zuul-test-config         
         untrusted-projects:
+          - osism/testbed
           - opentelekomcloud-scs/zuul-test
       opendev:
         untrusted-projects:
