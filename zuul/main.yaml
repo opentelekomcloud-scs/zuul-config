@@ -48,6 +48,8 @@
           - opentelekomcloud-scs/zuul-test-config         
         untrusted-projects:
           - opentelekomcloud-scs/zuul-test
+          - opentelekomcloud-scs/zuul-test-src-repo
+        untrusted-projects:          
           - exclude:
               - job
               - semaphore
@@ -56,8 +58,7 @@
               - nodeset
               - secret
             projects:
-              - osism/testbed
-              - opentelekomcloud-scs/zuul-test-src-repo
+              - osism/testbed    
       opendev:
         untrusted-projects:
           - zuul/zuul-jobs:
