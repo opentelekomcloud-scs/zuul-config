@@ -23,6 +23,19 @@
           - zuul/zuul-jobs:
               shadow:
                 - opentelekomcloud-scs/zuul-config
+      projects:     
+        - project:
+            merge-mode: squash-merge
+            default-branch: master
+            check:
+              jobs:
+                - noop   
+            gate:
+              jobs:
+                - noop
+            post:
+              jobs: 
+                - noop   
 
 - tenant:
     name: scs-stack
