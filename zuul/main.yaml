@@ -35,9 +35,15 @@
           - opentelekomcloud-scs/zuul-test-config         
         untrusted-projects:
           - opentelekomcloud-scs/zuul-test
-          - osism/testbed:
-              shadow:
-                - opentelekomcloud-scs/zuul-test
+          - exclude:
+              - job
+              - semaphore
+              - project
+              - project-template
+              - nodeset
+              - secret
+            projects:
+              - osism/testbed:
       opendev:
         untrusted-projects:
           - zuul/zuul-jobs:
