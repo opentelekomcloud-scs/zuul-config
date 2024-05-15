@@ -17,7 +17,6 @@
           - osism/container-image-osism-ansible
           - osism/ansible-collection-commons
           - osism/ansible-collection-services
-
       opendev:
         untrusted-projects:
           - zuul/zuul-jobs:
