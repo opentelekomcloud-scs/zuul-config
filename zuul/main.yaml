@@ -50,6 +50,46 @@
                 - project-template
                 - nodeset
                 - secret
+          - osism/zuul-jobs:
+              exclude:
+                - job
+                - semaphore
+                - project
+                - project-template
+                - nodeset
+                - secret
+          - osism/terraform-base:
+              exclude:
+                - job
+                - semaphore
+                - project
+                - project-template
+                - nodeset
+                - secret
+          - osism/container-image-osism-ansible:
+              exclude:
+                - job
+                - semaphore
+                - project
+                - project-template
+                - nodeset
+                - secret
+          - osism/ansible-collection-commons:
+              exclude:
+                - job
+                - semaphore
+                - project
+                - project-template
+                - nodeset
+                - secret
+          - osism/ansible-collection-services:
+              exclude:
+                - job
+                - semaphore
+                - project
+                - project-template
+                - nodeset
+                - secret
       opendev:
         untrusted-projects:
           - zuul/zuul-jobs:
