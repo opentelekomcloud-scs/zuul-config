@@ -50,3 +50,9 @@
         - "zuul_vault_addr is defined"
         - "zuul_base_vault_token_path is defined"
         - "zuul_vault is defined and zuul_vault.vault_role_id is defined"
+    
+    - name: Debug
+      debug:
+        msg: "pre.yaml of zuul-config aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+
+
