@@ -92,3 +92,11 @@ providers:
             diskimage: ubuntu-jammy
             flavor-name: s2.xlarge.2
             key-name: scs-stable-general
+  - name: docker-scs
+    driver: docker
+    pools:
+      - name: default
+        max-servers: 10
+        labels:
+          - name: ubuntu-jammy-container
+            image: ubuntu:22.04
