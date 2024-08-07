@@ -92,12 +92,3 @@ providers:
             diskimage: ubuntu-jammy
             flavor-name: s2.xlarge.2
             key-name: scs-stable-general
-  - name: docker-scs
-    driver: kubernetes
-    context: admin-cluster.local
-    pools:
-      - name: main
-        labels:
-          - name: pod-fedora
-            type: pod
-            image: docker.io/fedora:28
