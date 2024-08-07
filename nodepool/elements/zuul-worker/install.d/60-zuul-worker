@@ -74,5 +74,11 @@ pip install ansible==9.5.1
 apt-get install locales
 locale-gen en_US.UTF-8
 update-locale LANG=en_US.UTF-8
+LANG=en_US.UTF-8
+LC_ALL=en_US.UTF-8
+LANGUAGE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
 locale
 ANSIBLE_GALAXY_SERVER_GALAXY_URL=https://galaxy.ansible.com ANSIBLE_GALAXY_SERVER_LIST=galaxy ansible-galaxy collection install ansible.posix
