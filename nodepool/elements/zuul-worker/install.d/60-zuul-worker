@@ -53,23 +53,22 @@ fi
 
 # python3.12 is needed for OSISM Pipeline
 # Since it is not in standard Ubuntu, it has to be downloaded and compiled
-apt-get-update
+apt-get update
 apt-get install wget build-essential checkinstall -y
 apt-get install libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev zlib1g-dev -y
-cd /tmp 
-wget https://www.python.org/ftp/python/3.12.1/Python-3.12.1.tar.xz 
-tar -xf Python-3.12.1.tar.xz 
-cd Python-3.12.1 
-./configure --enable-optimizations 
-make -j $(nproc) 
-make install 
-python3 --version 
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py 
-python3 get-pip.py 
-cd /tmp 
-rm -rf Python-3.12.1.tar.xz Python-3.12.1 
+cd /tmp
+wget https://www.python.org/ftp/python/3.12.1/Python-3.12.1.tar.xz
+tar -xf Python-3.12.1.tar.xz
+cd Python-3.12.1
+./configure --enable-optimizations
+make -j $(nproc)
+make install
+python3 --version
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python3 get-pip.py
+cd /tmp
+rm -rf Python-3.12.1.tar.xz Python-3.12.1
 
 # Ansible with ansible-core > 2.15 needed
 pip install ansible==9.5.1
 ANSIBLE_GALAXY_SERVER_GALAXY_URL=https://galaxy.ansible.com ANSIBLE_GALAXY_SERVER_LIST=galaxy ansible-galaxy collection install ansible.posix
-
