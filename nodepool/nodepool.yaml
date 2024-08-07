@@ -93,10 +93,13 @@ providers:
             flavor-name: s2.xlarge.2
             key-name: scs-stable-general
   - name: docker-scs
-    driver: docker
+    driver: kubernetes
+    context: admin-cluster.local
     pools:
-      - name: default
-        max-servers: 10
+      - name: main
         labels:
-          - name: ubuntu-jammy-container
-            image: ubuntu:22.04
+          - name: kubernetes-namespace
+            type: namespace
+          - name: pod-fedora
+            type: pod
+            image: docker.io/fedora:28
