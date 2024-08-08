@@ -82,3 +82,5 @@ export LC_ALL=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 locale
 ANSIBLE_GALAXY_SERVER_GALAXY_URL=https://galaxy.ansible.com ANSIBLE_GALAXY_SERVER_LIST=galaxy ansible-galaxy collection install ansible.posix
+# install unzip
+apt-get install unzip
