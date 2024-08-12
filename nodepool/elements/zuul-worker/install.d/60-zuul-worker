@@ -87,4 +87,4 @@ source /home/zuul/venv/bin/activate
 pip install ansible
 chown -R zuul:zuul /home/zuul/venv
 # install unzip
-apt-get install unzip
+apt-get install unzip tree
